@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GeradorDeTestes.Dominio
+namespace GeradorDeTeste.Infra.Arquivos
 {
     internal static class Program
     {

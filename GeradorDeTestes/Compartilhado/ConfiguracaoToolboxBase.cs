@@ -22,7 +22,6 @@ namespace GeradorDeTestes.Compartilhado
 
         public virtual bool ExcluirHabilitado { get { return true; } }
 
-        public virtual bool FiltrarHabilitado { get { return false; } }
 
     }
 }

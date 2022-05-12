@@ -1,4 +1,5 @@
 ﻿using GeradorDeTestes.Dominio.Compartilhado;
+using GeradorDeTestes.Dominio.ModuloDisciplina;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace GeradorDeTestes.Dominio.ModuloMateria
 
         public Materia(Disciplina diciplina, string serie, string titulo)
         {
-            this.Disciplina = disciplina;
+            this.Disciplina = Disciplina;
             this.Serie = serie;
             this.Titulo = titulo;
         }

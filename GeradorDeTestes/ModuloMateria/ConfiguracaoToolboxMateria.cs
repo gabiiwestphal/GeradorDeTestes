@@ -17,6 +17,5 @@ namespace GeradorDeTestes.ModuloMateria
 
         public override string TooltipExcluir => "Excluir matéria";
 
-        public override bool FiltrarHabilitado { get { return true; } }
     }
 }

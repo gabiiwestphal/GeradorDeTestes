@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GeradorDeTestes.ModuloMateria
 {
@@ -37,7 +38,7 @@ namespace GeradorDeTestes.ModuloMateria
             if (listagemMateria == null)
                 listagemMateria = new ListagemMateriaControl();
 
-            CarregarMaterias();
+            //CarregarMaterias();
 
             return listagemMateria;
         }
