@@ -8,7 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ModuloQuestao\" />
+    <None Remove="TelaPrincipalForm.cs~RF84a6b794.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="ModuloExame\" />
   </ItemGroup>
 

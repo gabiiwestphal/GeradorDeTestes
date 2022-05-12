@@ -17,5 +17,8 @@ namespace GeradorDeTestes.ModuloMateria
 
         public override string TooltipExcluir => "Excluir matéria";
 
+        public override string TooltipVisualizar => "Visualizar matérias";
+
+        public override bool VisualizarHabilitado { get { return true; } }
     }
 }

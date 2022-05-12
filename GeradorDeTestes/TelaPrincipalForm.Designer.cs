@@ -21,162 +21,268 @@
         }
         private void InitializeComponent()
         {
-            this.menu = new System.Windows.Forms.MenuStrip();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMateria = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQuestao = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuExame = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disciplinasMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.materiasMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStripRodape = new System.Windows.Forms.StatusStrip();
-            this.labelRodape = new System.Windows.Forms.ToolStripStatusLabel();
-            this.panelRegistros = new System.Windows.Forms.Panel();
+            this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.questõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.examesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.btnInserir = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
-            this.toolbox = new System.Windows.Forms.ToolStrip();
-            this.menu.SuspendLayout();
-            this.statusStripRodape.SuspendLayout();
-            this.toolbox.SuspendLayout();
+            this.btnVisualizar = new System.Windows.Forms.ToolStripButton();
+            this.panelConteudo = new System.Windows.Forms.Panel();
+            this.panelRodape = new System.Windows.Forms.Panel();
+            this.txtRodape = new System.Windows.Forms.Label();
+            this.labelTipoCadastro = new System.Windows.Forms.Label();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.menuStrip1.SuspendLayout();
+            this.toolStrip.SuspendLayout();
+            this.panelRodape.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menu
+            // menuStrip1
             // 
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrosToolStripMenuItem});
-            this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(629, 24);
-            this.menu.TabIndex = 0;
-            this.menu.Text = "menuStrip1";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(879, 25);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ToolStripMenuItem
+            // 
+            this.ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuMateria,
+            this.menuQuestao,
+            this.menuExame});
+            this.ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ToolStripMenuItem.Name = "ToolStripMenuItem";
+            this.ToolStripMenuItem.Size = new System.Drawing.Size(79, 21);
+            this.ToolStripMenuItem.Text = "Cadastros";
+            // 
+            // menuMateria
+            // 
+            this.menuMateria.Name = "menuMateria";
+            this.menuMateria.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.menuMateria.Size = new System.Drawing.Size(152, 22);
+            this.menuMateria.Text = "Materias";
+            this.menuMateria.Click += new System.EventHandler(this.menuMateria_Click);
+            // 
+            // menuQuestao
+            // 
+            this.menuQuestao.Name = "menuQuestao";
+            this.menuQuestao.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.menuQuestao.Size = new System.Drawing.Size(152, 22);
+            this.menuQuestao.Text = "Questões";
+            this.menuQuestao.Click += new System.EventHandler(this.menuQuestao_Click);
+            // 
+            // menuExame
+            // 
+            this.menuExame.Name = "menuExame";
+            this.menuExame.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.menuExame.Size = new System.Drawing.Size(152, 22);
+            this.menuExame.Text = "Exames";
+            this.menuExame.Click += new System.EventHandler(this.menuExame_Click);
             // 
             // cadastrosToolStripMenuItem
             // 
-            this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.disciplinasMenuItem,
-            this.materiasMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
-            // disciplinasMenuItem
+            // materiasToolStripMenuItem
             // 
-            this.disciplinasMenuItem.Name = "disciplinasMenuItem";
-            this.disciplinasMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.disciplinasMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.disciplinasMenuItem.Text = "Disciplinas";
-            this.disciplinasMenuItem.ToolTipText = "Disciplinas";
-            this.disciplinasMenuItem.Click += new System.EventHandler(this.disciplinasMenuItem_Click);
+            this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
+            this.materiasToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.materiasToolStripMenuItem.Text = "Materias";
             // 
-            // materiasMenuItem
+            // questõesToolStripMenuItem
             // 
-            this.materiasMenuItem.Name = "materiasMenuItem";
-            this.materiasMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.materiasMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.materiasMenuItem.Text = "Matérias";
-            this.materiasMenuItem.ToolTipText = "Matérias";
-            this.materiasMenuItem.Click += new System.EventHandler(this.materiasMenuItem_Click);
+            this.questõesToolStripMenuItem.Name = "questõesToolStripMenuItem";
+            this.questõesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.questõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.questõesToolStripMenuItem.Text = "Questões";
             // 
-            // statusStripRodape
+            // examesToolStripMenuItem
             // 
-            this.statusStripRodape.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.labelRodape});
-            this.statusStripRodape.Location = new System.Drawing.Point(0, 428);
-            this.statusStripRodape.Name = "statusStripRodape";
-            this.statusStripRodape.Size = new System.Drawing.Size(629, 22);
-            this.statusStripRodape.TabIndex = 2;
-            this.statusStripRodape.Text = "statusStrip1";
+            this.examesToolStripMenuItem.Name = "examesToolStripMenuItem";
+            this.examesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.examesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.examesToolStripMenuItem.Text = "Exames";
             // 
-            // labelRodape
+            // toolStrip
             // 
-            this.labelRodape.Name = "labelRodape";
-            this.labelRodape.Size = new System.Drawing.Size(73, 17);
-            this.labelRodape.Text = "Visualizando";
-            // 
-            // panelRegistros
-            // 
-            this.panelRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRegistros.Location = new System.Drawing.Point(0, 56);
-            this.panelRegistros.Name = "panelRegistros";
-            this.panelRegistros.Size = new System.Drawing.Size(629, 372);
-            this.panelRegistros.TabIndex = 3;
+            this.toolStrip.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip.Enabled = false;
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnInserir,
+            this.btnEditar,
+            this.btnExcluir,
+            this.btnVisualizar});
+            this.toolStrip.Location = new System.Drawing.Point(0, 25);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 6, 1, 6);
+            this.toolStrip.Size = new System.Drawing.Size(879, 25);
+            this.toolStrip.TabIndex = 1;
+            this.toolStrip.Text = "toolStrip1";
             // 
             // btnInserir
             // 
-            this.btnInserir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnInserir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnInserir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnInserir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInserir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Padding = new System.Windows.Forms.Padding(5);
-            this.btnInserir.Size = new System.Drawing.Size(53, 29);
-            this.btnInserir.Text = "Inserir";
+            this.btnInserir.Size = new System.Drawing.Size(23, 10);
+            this.btnInserir.Text = "toolStripButton3";
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Padding = new System.Windows.Forms.Padding(5);
-            this.btnEditar.Size = new System.Drawing.Size(51, 29);
-            this.btnEditar.Text = "Editar";
+            this.btnEditar.Size = new System.Drawing.Size(23, 10);
+            this.btnEditar.Text = "toolStripButton4";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Padding = new System.Windows.Forms.Padding(5);
-            this.btnExcluir.Size = new System.Drawing.Size(56, 29);
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Size = new System.Drawing.Size(23, 10);
+            this.btnExcluir.Text = "toolStripButton5";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // toolbox
+            // btnVisualizar
             // 
-            this.toolbox.Enabled = false;
-            this.toolbox.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnInserir,
-            this.btnEditar,
-            this.btnExcluir});
-            this.toolbox.Location = new System.Drawing.Point(0, 24);
-            this.toolbox.Name = "toolbox";
-            this.toolbox.Size = new System.Drawing.Size(629, 32);
-            this.toolbox.TabIndex = 1;
-            this.toolbox.Text = "toolStrip1";
+            this.btnVisualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVisualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnVisualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVisualizar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.btnVisualizar.Name = "btnVisualizar";
+            this.btnVisualizar.Size = new System.Drawing.Size(23, 10);
+            this.btnVisualizar.Text = "toolStripButton6";
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
+            // 
+            // panelConteudo
+            // 
+            this.panelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelConteudo.Location = new System.Drawing.Point(0, 50);
+            this.panelConteudo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelConteudo.Name = "panelConteudo";
+            this.panelConteudo.Size = new System.Drawing.Size(879, 210);
+            this.panelConteudo.TabIndex = 2;
+            this.panelConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConteudo_Paint);
+            // 
+            // panelRodape
+            // 
+            this.panelRodape.Controls.Add(this.txtRodape);
+            this.panelRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelRodape.Location = new System.Drawing.Point(0, 233);
+            this.panelRodape.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelRodape.Name = "panelRodape";
+            this.panelRodape.Size = new System.Drawing.Size(879, 27);
+            this.panelRodape.TabIndex = 3;
+            // 
+            // txtRodape
+            // 
+            this.txtRodape.AutoSize = true;
+            this.txtRodape.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtRodape.Location = new System.Drawing.Point(5, 3);
+            this.txtRodape.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtRodape.Name = "txtRodape";
+            this.txtRodape.Size = new System.Drawing.Size(46, 16);
+            this.txtRodape.TabIndex = 0;
+            this.txtRodape.Text = "Aviso";
+            // 
+            // labelTipoCadastro
+            // 
+            this.labelTipoCadastro.AutoSize = true;
+            this.labelTipoCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTipoCadastro.Location = new System.Drawing.Point(397, 43);
+            this.labelTipoCadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTipoCadastro.Name = "labelTipoCadastro";
+            this.labelTipoCadastro.Size = new System.Drawing.Size(106, 16);
+            this.labelTipoCadastro.TabIndex = 4;
+            this.labelTipoCadastro.Text = "Tipo Cadastro";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
             // 
             // TelaPrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 450);
-            this.Controls.Add(this.panelRegistros);
-            this.Controls.Add(this.statusStripRodape);
-            this.Controls.Add(this.toolbox);
-            this.Controls.Add(this.menu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.menu;
+            this.ClientSize = new System.Drawing.Size(879, 260);
+            this.Controls.Add(this.labelTipoCadastro);
+            this.Controls.Add(this.panelRodape);
+            this.Controls.Add(this.panelConteudo);
+            this.Controls.Add(this.toolStrip);
+            this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "TelaPrincipalForm";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gerador de Testes";
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
-            this.statusStripRodape.ResumeLayout(false);
-            this.statusStripRodape.PerformLayout();
-            this.toolbox.ResumeLayout(false);
-            this.toolbox.PerformLayout();
+            this.Text = "Gerador de testes";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
+            this.panelRodape.ResumeLayout(false);
+            this.panelRodape.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private System.Windows.Forms.MenuStrip menu;
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem disciplinasMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem materiasMenuItem;
-        private System.Windows.Forms.StatusStrip statusStripRodape;
-        private System.Windows.Forms.Panel panelRegistros;
-        private System.Windows.Forms.ToolStripStatusLabel labelRodape;
+        private System.Windows.Forms.ToolStripMenuItem materiasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem questõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem examesToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuMateria;
+        private System.Windows.Forms.ToolStripMenuItem menuQuestao;
+        private System.Windows.Forms.ToolStripMenuItem menuExame;
         private System.Windows.Forms.ToolStripButton btnInserir;
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnExcluir;
-        private System.Windows.Forms.ToolStrip toolbox;
+        private System.Windows.Forms.ToolStripButton btnVisualizar;
+        private System.Windows.Forms.Panel panelConteudo;
+        private System.Windows.Forms.Panel panelRodape;
+        private System.Windows.Forms.Label txtRodape;
+        private System.Windows.Forms.Label labelTipoCadastro;
     }
 }
+    

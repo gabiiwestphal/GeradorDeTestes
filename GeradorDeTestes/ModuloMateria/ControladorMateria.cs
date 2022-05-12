@@ -22,6 +22,11 @@ namespace GeradorDeTestes.ModuloMateria
             MessageBox.Show("Deseja realmente excluir essa matéria?", "Excluir matéria", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
         }
 
+        public override void Visualizar()
+        {
+            TelaVisualizarMateriaForm telaFiltro = new TelaVisualizarMateriaForm("Visualizar Matérias");
+            telaFiltro.ShowDialog();
+        }
         public override void Inserir()
         {
             TelaCadastroMateriaForm telaCadastro = new TelaCadastroMateriaForm("Cadastrar Matéria");

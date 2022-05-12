@@ -10,8 +10,7 @@ namespace GeradorDeTestes.Dominio.ModuloDisciplina
     public class Disciplina : EntidadeBase<Disciplina>
     {
         public string Nome { get; set; }
-        public bool PodeExcluirDisciplina => QuantidadeMateriasRelacionadas == 0 ? true : false;
-        public int QuantidadeMateriasRelacionadas = 0;
+ 
         public Disciplina()
         {
 

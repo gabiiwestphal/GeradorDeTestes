@@ -16,19 +16,16 @@ namespace GeradorDeTestes
     {
         private ControladorBase controlador;
         private Dictionary<string, ControladorBase> controladores;
-        //private DataContext contextoDados;
-
+        //private DateContext contextoDados;
         public TelaPrincipalForm()
         {
             InitializeComponent();
-
             Instancia = this;
 
-            labelRodape.Text = string.Empty;
-
-            labelTipoCadastro.Text = string.Empty;
+            txtRodape.Text = string.Empty;
 
             InicializarControladores();
+
         }
 
         public static TelaPrincipalForm Instancia
@@ -37,48 +34,24 @@ namespace GeradorDeTestes
             private set;
         }
 
-        private void disciplinasMenuItem_Click(object sender, EventArgs e)
+        public void AtualizarRodape(string mensagem)
+        {
+            txtRodape.Text = mensagem;
+        }
+
+        private void menuMateria_Click(object sender, EventArgs e)
         {
             ConfigurarTelaPrincipal((ToolStripMenuItem)sender);
         }
 
-        private void materiasMenuItem_Click(object sender, EventArgs e)
+        private void menuQuestao_Click(object sender, EventArgs e)
         {
             ConfigurarTelaPrincipal((ToolStripMenuItem)sender);
         }
 
-        private void questoesMenuItem_Click(object sender, EventArgs e)
+        private void menuExame_Click(object sender, EventArgs e)
         {
             ConfigurarTelaPrincipal((ToolStripMenuItem)sender);
-        }
-
-        private void testesEscolaresMenuItem_Click(object sender, EventArgs e)
-        {
-            ConfigurarTelaPrincipal((ToolStripMenuItem)sender);
-        }
-
-        public void AtualizarRodape(string mensagem, Color cor)
-        {
-            labelRodape.Text = mensagem;
-
-            statusStripRodape.BackColor = cor;
-
-            if (cor.IsEmpty == false)
-                labelRodape.ForeColor = Color.White;
-        }
-
-        private void ConfigurarBotoes(ConfiguracaoToolboxBase configuracao)
-        {
-            btnInserir.Enabled = configuracao.InserirHabilitado;
-            btnEditar.Enabled = configuracao.EditarHabilitado;
-            btnExcluir.Enabled = configuracao.ExcluirHabilitado;
-        }
-
-        private void ConfigurarTooltips(ConfiguracaoToolboxBase configuracao)
-        {
-            btnInserir.ToolTipText = configuracao.TooltipInserir;
-            btnEditar.ToolTipText = configuracao.TooltipEditar;
-            btnExcluir.ToolTipText = configuracao.TooltipExcluir;
         }
 
         private void ConfigurarTelaPrincipal(ToolStripMenuItem opcaoSelecionada)
@@ -90,15 +63,15 @@ namespace GeradorDeTestes
             ConfigurarToolbox();
 
             ConfigurarListagem();
-        }
 
-        private void ConfigurarToolbox()
+        }
+        public void ConfigurarToolbox()
         {
             ConfiguracaoToolboxBase configuracao = controlador.ObterConfiguracaoToolbox();
 
             if (configuracao != null)
             {
-                toolbox.Enabled = true;
+                toolStrip.Enabled = true;
 
                 labelTipoCadastro.Text = configuracao.TipoCadastro;
 
@@ -108,27 +81,43 @@ namespace GeradorDeTestes
             }
         }
 
+        private void ConfigurarBotoes(ConfiguracaoToolboxBase configuracao)
+        {
+            btnInserir.Enabled = configuracao.InserirHabilitado;
+            btnEditar.Enabled = configuracao.EditarHabilitado;
+            btnExcluir.Enabled = configuracao.ExcluirHabilitado;
+            btnVisualizar.Enabled = configuracao.VisualizarHabilitado;
+        }
+
+        private void ConfigurarTooltips(ConfiguracaoToolboxBase configuracao)
+        {
+            btnInserir.ToolTipText = configuracao.TooltipInserir;
+            btnEditar.ToolTipText = configuracao.TooltipEditar;
+            btnExcluir.ToolTipText = configuracao.TooltipExcluir;
+            btnVisualizar.ToolTipText = configuracao.TooltipVisualizar;
+        }
+
         private void ConfigurarListagem()
         {
-            AtualizarRodape("", Color.DarkBlue);
+            AtualizarRodape("");
 
             var listagemControl = controlador.ObterListagem();
 
-            panelRegistros.Controls.Clear();
+            panelConteudo.Controls.Clear();
 
             listagemControl.Dock = DockStyle.Fill;
 
-            panelRegistros.Controls.Add(listagemControl);
+            panelConteudo.Controls.Add(listagemControl);
         }
 
         private void InicializarControladores()
         {
+            //Repositorios aqui
 
             controladores = new Dictionary<string, ControladorBase>();
-
             controladores.Add("Materias", new ControladorMateria());
-           // controladores.Add("Questões", new ControladorQuestao());
-
+            //controladores.Add("Questões", new ControladorQuestao());
+            //controladores.Add("Exames", new ControladorExame());
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -146,19 +135,15 @@ namespace GeradorDeTestes
             controlador.Excluir();
         }
 
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        private void btnVisualizar_Click(object sender, EventArgs e)
         {
-            if (toolbox.Enabled == true)
-            {
-                switch (keyData)
-                {
-                    case Keys.Control | Keys.I: controlador.Inserir(); break;
-                    case Keys.Control | Keys.D: controlador.Excluir(); break;
-                    case Keys.Control | Keys.E: controlador.Editar(); break;                     
-                }
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
+            controlador.Visualizar();
         }
 
+        private void panelConteudo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
+

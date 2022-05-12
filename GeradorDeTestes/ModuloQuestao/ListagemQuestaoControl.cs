@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GeradorDeTestes.ModuloMateria
+namespace GeradorDeTestes.ModuloQuestao
 {
-    public partial class TelaCadastroMateriaForm : Form
+    public partial class ListagemQuestaoControl : Form
     {
-        public TelaCadastroMateriaForm(string nomeTela)
+        public ListagemQuestaoControl()
         {
             InitializeComponent();
-            Text = nomeTela;
         }
     }
 }

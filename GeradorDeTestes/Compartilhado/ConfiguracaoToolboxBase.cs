@@ -16,12 +16,16 @@ namespace GeradorDeTestes.Compartilhado
 
         public abstract string TooltipExcluir { get; }
 
+        public abstract string TooltipVisualizar { get; }
+
         public virtual bool InserirHabilitado { get { return true; } }
 
         public virtual bool EditarHabilitado { get { return true; } }
 
         public virtual bool ExcluirHabilitado { get { return true; } }
 
+        public virtual bool VisualizarHabilitado { get { return false; } }
 
     }
 }
+

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GeradorDeTestes.ModuloMateria
 {
-    public partial class TelaCadastroMateriaForm : Form
+    public partial class TelaVIsualizarMateriaForm : Form
     {
-        public TelaCadastroMateriaForm(string nomeTela)
+        public TelaVIsualizarMateriaForm(string nomeTela)
         {
             InitializeComponent();
             Text = nomeTela;

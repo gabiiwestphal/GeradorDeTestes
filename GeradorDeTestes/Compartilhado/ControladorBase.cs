@@ -12,7 +12,10 @@ namespace GeradorDeTestes.Compartilhado
         public abstract void Inserir();
         public abstract void Editar();
         public abstract void Excluir();
+        public abstract void Visualizar();
         public abstract UserControl ObterListagem();
+
         public abstract ConfiguracaoToolboxBase ObterConfiguracaoToolbox();
     }
 }
+
