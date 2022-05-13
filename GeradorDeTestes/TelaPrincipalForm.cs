@@ -49,7 +49,7 @@ namespace GeradorDeTestes
             ConfigurarTelaPrincipal((ToolStripMenuItem)sender);
         }
 
-        private void menuExame_Click(object sender, EventArgs e)
+        private void menuTestes_Click(object sender, EventArgs e)
         {
             ConfigurarTelaPrincipal((ToolStripMenuItem)sender);
         }
@@ -117,7 +117,7 @@ namespace GeradorDeTestes
             controladores = new Dictionary<string, ControladorBase>();
             controladores.Add("Materias", new ControladorMateria());
             //controladores.Add("Questões", new ControladorQuestao());
-            //controladores.Add("Exames", new ControladorExame());
+           // controladores.Add("Exames", new ControladorTestes());
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -138,11 +138,6 @@ namespace GeradorDeTestes
         private void btnVisualizar_Click(object sender, EventArgs e)
         {
             controlador.Visualizar();
-        }
-
-        private void panelConteudo_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

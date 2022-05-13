@@ -25,11 +25,11 @@
             this.ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMateria = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQuestao = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuExame = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuTestes = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.questõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.examesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.btnInserir = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
@@ -62,7 +62,7 @@
             this.ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuMateria,
             this.menuQuestao,
-            this.menuExame});
+            this.menuTestes});
             this.ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ToolStripMenuItem.Name = "ToolStripMenuItem";
             this.ToolStripMenuItem.Size = new System.Drawing.Size(79, 21);
@@ -84,13 +84,13 @@
             this.menuQuestao.Text = "Questões";
             this.menuQuestao.Click += new System.EventHandler(this.menuQuestao_Click);
             // 
-            // menuExame
+            // menuTestes
             // 
-            this.menuExame.Name = "menuExame";
-            this.menuExame.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.menuExame.Size = new System.Drawing.Size(152, 22);
-            this.menuExame.Text = "Exames";
-            this.menuExame.Click += new System.EventHandler(this.menuExame_Click);
+            this.menuTestes.Name = "menuTestes";
+            this.menuTestes.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.menuTestes.Size = new System.Drawing.Size(152, 22);
+            this.menuTestes.Text = "Testes";
+            this.menuTestes.Click += new System.EventHandler(this.menuTestes_Click);
             // 
             // cadastrosToolStripMenuItem
             // 
@@ -112,12 +112,12 @@
             this.questõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.questõesToolStripMenuItem.Text = "Questões";
             // 
-            // examesToolStripMenuItem
+            // testesToolStripMenuItem
             // 
-            this.examesToolStripMenuItem.Name = "examesToolStripMenuItem";
-            this.examesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.examesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.examesToolStripMenuItem.Text = "Exames";
+            this.testesToolStripMenuItem.Name = "testesToolStripMenuItem";
+            this.testesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.testesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testesToolStripMenuItem.Text = "Testes";
             // 
             // toolStrip
             // 
@@ -267,14 +267,14 @@
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem materiasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem questõesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem examesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testesToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuMateria;
         private System.Windows.Forms.ToolStripMenuItem menuQuestao;
-        private System.Windows.Forms.ToolStripMenuItem menuExame;
+        private System.Windows.Forms.ToolStripMenuItem menutestes;
         private System.Windows.Forms.ToolStripButton btnInserir;
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnExcluir;

@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GeradorDeTestes.ModuloMateria
+namespace GeradorDeTestes.ModuloTeste
 {
-    public partial class TelaVisualizarMateriaForm : Form
+    public partial class ListagemTestesControl : UserControl
     {
-        public TelaVisualizarMateriaForm(string nomeTela)
+        public ListagemTestesControl()
         {
             InitializeComponent();
-            Text = nomeTela;
         }
     }
 }

@@ -24,8 +24,8 @@ namespace GeradorDeTestes.ModuloMateria
 
         public override void Visualizar()
         {
-            TelaVisualizarMateriaForm telaFiltro = new TelaVisualizarMateriaForm("Visualizar Matérias");
-            telaFiltro.ShowDialog();
+            TelaVisualizarMateriaForm telaVisualizar = new TelaVisualizarMateriaForm("Visualizar Matérias");
+            telaVisualizar.ShowDialog();
         }
         public override void Inserir()
         {

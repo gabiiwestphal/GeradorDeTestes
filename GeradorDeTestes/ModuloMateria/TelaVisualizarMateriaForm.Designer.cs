@@ -1,6 +1,6 @@
 ﻿namespace GeradorDeTestes.ModuloMateria
 {
-    partial class TelaVIsualizarMateriaForm
+    partial class TelaVisualizarMateriaForm
     {
         /// <summary>
         /// Required designer variable.

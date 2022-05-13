@@ -10,6 +10,7 @@ namespace GeradorDeTestes.ModuloQuestao
 {
     internal class ControladorQuestao : ControladorBase
     {
+        private ListagemQuestaoControl ListagemQuestao;
         public override void Editar()
         {
             TelaCadastroQuestaoForm telaEdicao = new TelaCadastroQuestaoForm("Editar Questão");
@@ -23,7 +24,7 @@ namespace GeradorDeTestes.ModuloQuestao
 
         public override void Visualizar()
         {
-            TelaFiltroQuestaoForm telaFiltro = new TelaFiltroQuestaoForm("Editar Questão");
+            TelaListagemQuestaoForm telaFiltro = new TelaListagemQuestaoForm("Editar Questão");
             telaFiltro.ShowDialog();
         }
 
@@ -40,11 +41,11 @@ namespace GeradorDeTestes.ModuloQuestao
 
         public override UserControl ObterListagem()
         {
-            var tabelaQuestao = new ListagemQuestaoControl();
+            var ListagemQuestao = new ListagemQuestaoControl();
 
             //CarregarQuestoes();
 
-            return tabelaQuestao;
+            return ListagemQuestao;
         }
     }
 }
